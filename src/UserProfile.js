@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 function UserProfile() {
   const [user, setUser] = useState({});
 
-  const {userId} = useParams();
-  
+  const { userId } = useParams();
+
   useEffect(() => {
     async function loadUser() {
       const response = await fetch(

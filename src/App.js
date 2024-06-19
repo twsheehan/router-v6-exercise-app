@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import BackButton from "./BackButton";
 import ForwardButton from "./ForwardButton";
 import GoHomeButton from "./GoHomeButton";
@@ -23,12 +20,11 @@ function App() {
         <br />
 
         <h1>Navbar</h1>
-        {
-          userId.map((id) => (
-            <div key={id}>
-              <Link to={`/user/${id}`}>User {id}</Link>
-            </div>
-          ))}
+        {userId.map((id) => (
+          <div key={id}>
+            <Link to={`/user/${id}`}>User {id}</Link>
+          </div>
+        ))}
 
         <RootRoutes />
       </div>
